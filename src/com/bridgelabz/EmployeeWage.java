@@ -4,14 +4,21 @@ public class EmployeeWage { // Creating Employee Wage class
 
     public static void main(String[] args) {
         //Constants
-        int IS_PRESENT = 1;
+        int IS_FULL_TIME = 1;
+        int  ENP_RATE_PER_HOUR = 20;
+        // Variables
+        int emHrs = 0;
+        int empWage = 0;
         System.out.println("Welcome to Employee Wage");
+        // computation
         double empCheck = Math.floor(Math.random()* 10) %2;
         // Using random class to Get random number
-        if (empCheck == IS_PRESENT){ //echEmp get 1 when first condition is true and showing employee present
-            System.out.println("Employee is Present");
+        if (empCheck == IS_FULL_TIME){ //echEmp get 1 when first condition is true and showing employee present
+            emHrs = 8;
         }else {
-            System.out.println("Employee is Absent");
+            emHrs = 0;
         }
+        empWage = emHrs * ENP_RATE_PER_HOUR;
+        System.out.println("Employee Wage " + empWage);
     }
 }
